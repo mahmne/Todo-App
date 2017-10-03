@@ -15,6 +15,7 @@ app.get('/', function (req, res, next) {
 // task 2: add middleware log every request METHOD and URL
 app.use(log);
 
+// setup static handler
 // app.use('public', express.static(path.join(__dirname, 'public')));
 
 app.listen(3000, function () {

@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 var log = function (req, res, next) {
   console.log('Logged', req.method, req.url);
@@ -16,7 +17,7 @@ app.get('/', function (req, res, next) {
 app.use(log);
 
 // setup static handler
-// app.use('public', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.listen(3000, function () {
   console.log('app listening in 3000');

@@ -6,13 +6,13 @@ var log = function (req, res, next) {
   next();
 };
 
-// create hello word in Express
+// task 1 :create hello word in Express
 app.get('/', function (req, res, next) {
   res.send('Hello World');
   next();
 });
 
-// add middleware log every request METHOD and URL
+// task 2: add middleware log every request METHOD and URL
 app.use(log);
 
 // app.use('public', express.static(path.join(__dirname, 'public')));
